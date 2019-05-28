@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Graphical Assets\Characters\LarryIRL\KidLarry\Scripts\KidLarryMovementAnimationsDemoScript.cs" />
+    <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\QuickTime.cs" />
     <None Include="Assets\Graphical Assets\Characters\LarryIRL\Common\Larrys' Contact Information.txt" />
     <None Include="Assets\Graphical Assets\Characters\LarryIRL\KidLarry\Kid Larry Documentation.txt" />

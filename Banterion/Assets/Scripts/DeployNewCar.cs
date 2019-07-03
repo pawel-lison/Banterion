@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deployNewCar : MonoBehaviour {
+public class DeployNewCar : MonoBehaviour {
 
     public GameObject carPrefab;
     private Vector2 screenBounds;
@@ -15,7 +15,7 @@ public class deployNewCar : MonoBehaviour {
 
     private void spawnCars() {
         GameObject a = Instantiate(carPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 2, -2.8f);
+        a.transform.position = new Vector2(screenBounds.x * 1.5f, -2.8f);
     }
 
     IEnumerator CarTraffic() {

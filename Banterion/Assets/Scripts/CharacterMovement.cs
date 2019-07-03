@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float Speed = 5f;
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void FixedUpdate()
+    {              
+            float h = Input.GetAxis("Horizontal") * Speed;
+
+            this.transform.Translate(h * Time.deltaTime, 0, 0);      
+
     }
 }

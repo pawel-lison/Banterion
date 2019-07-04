@@ -1435,6 +1435,7 @@ MonoBehaviour:
   SpriteBG: {fileID: 709073091}
   car: {fileID: 866917810655509070, guid: a95b7ebb862cd1f4e99b8c901fdc8f93, type: 3}
   QTE: {fileID: 393506887}
+  counter: 0
 --- !u!61 &481375138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1445,7 +1446,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7924524, y: -0.15370178}
@@ -3520,7 +3521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049692566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.68, y: -2.79, z: 0}
+  m_LocalPosition: {x: -3.47, y: -2.79, z: 0}
   m_LocalScale: {x: 3.379756, y: 3.379756, z: 3.379756}
   m_Children:
   - {fileID: 481375139}

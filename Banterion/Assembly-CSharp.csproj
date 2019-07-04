@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\RunCarO.cs" />
      <Compile Include="Assets\Scripts\RunCloud.cs" />
      <Compile Include="Assets\Scripts\Shadow.cs" />
+     <Compile Include="Assets\Scripts\StopCar.cs" />
+     <Compile Include="Assets\Stop.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Graphical Assets\Characters\LarryIRL\Common\Larrys&apos; Contact Information.txt" />

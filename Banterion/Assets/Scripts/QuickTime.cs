@@ -14,6 +14,8 @@ public class QuickTime : MonoBehaviour {
     private string keyExpected;
     private int n;
     private int entry = 0;
+    public int counter = 0;
+    private bool wasCorrect = false;
 
     private void Start() {
         SpriteUp.enabled = false;
@@ -22,6 +24,7 @@ public class QuickTime : MonoBehaviour {
         SpriteRight.enabled = false;
         SpriteBG.enabled = false;
         keyExpected = null;
+        wasCorrect = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -34,6 +37,14 @@ public class QuickTime : MonoBehaviour {
         else {
             QTE.SetActive(false);
             SpriteBG.enabled = false;
+            counter = wasCorrect == true ? counter + 1 : 0;
+            Debug.Log(counter);
+
+            if (counter >= 5) {
+                Start();
+                enabled = false;
+            }
+
             Start();
             entry--;
         }
@@ -43,13 +54,12 @@ public class QuickTime : MonoBehaviour {
     private void Update() {
         if (Input.anyKeyDown) {
             if (Input.GetButtonDown(keyExpected)) {
-                //start coroutine keypressing
-                Start();
+                wasCorrect = true;
                 Debug.Log("correct");
             }
             else {
+                wasCorrect = false;
                 Debug.Log("incorrect");
-                Start();
             }
         }
     }
@@ -63,7 +73,7 @@ public class QuickTime : MonoBehaviour {
         yield return new WaitForSeconds(1);
 
     }
-    public void GenKey() {
+    private void GenKey() {
         n = Random.Range(0, 4);
 
         switch (n) {
@@ -84,39 +94,13 @@ public class QuickTime : MonoBehaviour {
                 keyExpected = "right";
                 break;
         }
-        /*
-        if(Input.anyKeyDown){
-            if (Input.GetButtonDown("up")) {
-                    SpriteUp.enabled = false;
-                    SpriteBG.enabled = false;
-                    Debug.Log("correct");
-                    return;
-                }
-                Debug.Log("incorrect");
-            }
-        if (Input.GetButtonDown("down")) {
-                    SpriteDown.enabled = false;
-                    SpriteBG.enabled = false;
-                    Debug.Log("correct");
-                    return;
-                }
-                Debug.Log("incorrect");
+    }
 
-        if (Input.GetButtonDown("left")) {
-                    SpriteLeft.enabled = false;
-                    SpriteBG.enabled = false;
-                    Debug.Log("correct");
-                    return;
-                }
-                Debug.Log("incorrect");
+    public int GetCounter() {
+        return counter;
+    }
 
-        if (Input.GetButtonDown("right")) {
-                    SpriteRight.enabled = false;
-                    SpriteBG.enabled = false;
-                    Debug.Log("correct");
-                    return;
-                }
-                Debug.Log("incorrect");
-        */
+    public void SetCounter(int c) {
+        counter = c;
     }
 }

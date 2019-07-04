@@ -10,68 +10,113 @@ public class QuickTime : MonoBehaviour {
     public Image SpriteRight;
     public Image SpriteBG;
     public GameObject car;
+    public GameObject QTE;
+    private string keyExpected;
+    private int n;
+    private int entry = 0;
 
-    //hide the buttons
-    public void Start() {
+    private void Start() {
         SpriteUp.enabled = false;
         SpriteDown.enabled = false;
         SpriteLeft.enabled = false;
         SpriteRight.enabled = false;
         SpriteBG.enabled = false;
+        keyExpected = null;
     }
 
-    //detect cars in the a hitch area, does not currently work
     private void OnTriggerEnter2D(Collider2D other) {
-
-        SpriteBG.enabled = true;
-        Getcombination();
-
+        if (entry == 0) {
+            QTE.SetActive(true);
+            SpriteBG.enabled = true;
+            GenKey();
+            entry++;
+        }
+        else {
+            QTE.SetActive(false);
+            SpriteBG.enabled = false;
+            Start();
+            entry--;
+        }
 
     }
 
-    //get a random int to determine what button appears and what button the player has to press.
-    public void Getcombination() {
-        int n = Random.Range(0, 4);
+    private void Update() {
+        if (Input.anyKeyDown) {
+            if (Input.GetButtonDown(keyExpected)) {
+                //start coroutine keypressing
+                Start();
+                Debug.Log("correct");
+            }
+            else {
+                Debug.Log("incorrect");
+                Start();
+            }
+        }
+    }
 
-        if (n == 0) {
-            SpriteUp.enabled = true;
+    IEnumerator GetKey() {
 
+        if (Input.GetButtonDown(keyExpected)) {
+            Start();
+            Debug.Log("correct");
+        }
+        yield return new WaitForSeconds(1);
+
+    }
+    public void GenKey() {
+        n = Random.Range(0, 4);
+
+        switch (n) {
+            case 0:
+                SpriteUp.enabled = true;
+                keyExpected = "up";
+                break;
+            case 1:
+                SpriteDown.enabled = true;
+                keyExpected = "down";
+                break;
+            case 2:
+                SpriteLeft.enabled = true;
+                keyExpected = "left";
+                break;
+            case 3:
+                SpriteRight.enabled = true;
+                keyExpected = "right";
+                break;
+        }
+        /*
+        if(Input.anyKeyDown){
             if (Input.GetButtonDown("up")) {
-                SpriteUp.enabled = false;
-                SpriteBG.enabled = false;
-                return;
+                    SpriteUp.enabled = false;
+                    SpriteBG.enabled = false;
+                    Debug.Log("correct");
+                    return;
+                }
+                Debug.Log("incorrect");
             }
-        }
+        if (Input.GetButtonDown("down")) {
+                    SpriteDown.enabled = false;
+                    SpriteBG.enabled = false;
+                    Debug.Log("correct");
+                    return;
+                }
+                Debug.Log("incorrect");
 
-        else if (n == 1) {
-            SpriteDown.enabled = true;
+        if (Input.GetButtonDown("left")) {
+                    SpriteLeft.enabled = false;
+                    SpriteBG.enabled = false;
+                    Debug.Log("correct");
+                    return;
+                }
+                Debug.Log("incorrect");
 
-            if (Input.GetButtonDown("down")) {
-                SpriteDown.enabled = false;
-                SpriteBG.enabled = false;
-                return;
-            }
-        }
-
-        else if (n == 2) {
-            SpriteLeft.enabled = true;
-
-            if (Input.GetButtonDown("left")) {
-                SpriteLeft.enabled = false;
-                SpriteBG.enabled = false;
-                return;
-            }
-        }
-
-        else if (n == 3) {
-            SpriteRight.enabled = true;
-
-            if (Input.GetButtonDown("right")) {
-                SpriteRight.enabled = false;
-                SpriteBG.enabled = false;
-                return;
-            }
-        }
-
+        if (Input.GetButtonDown("right")) {
+                    SpriteRight.enabled = false;
+                    SpriteBG.enabled = false;
+                    Debug.Log("correct");
+                    return;
+                }
+                Debug.Log("incorrect");
+        */
     }
 }

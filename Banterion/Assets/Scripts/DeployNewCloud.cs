@@ -12,7 +12,7 @@ public class DeployNewCloud : MonoBehaviour {
         StartCoroutine(CloudySky());
     }
 
-    private void spawnClouds() {
+    private void spawnCloud() {
         GameObject a = Instantiate(cloudPrefab) as GameObject;
         a.transform.position = new Vector2(-screenBounds.x * 1.2f, -2.57f);
     }
@@ -26,7 +26,7 @@ public class DeployNewCloud : MonoBehaviour {
             randNormal = 25 + 7 * randStdNormal;
 
             yield return new WaitForSeconds(randNormal);
-            spawnClouds();
+            spawnCloud();
         }
     }
 }

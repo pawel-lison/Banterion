@@ -11,10 +11,11 @@ public class QuickTime : MonoBehaviour {
     public Image SpriteBG;
     public GameObject car;
     public GameObject QTE;
+    public GameObject StopArea;
     private string keyExpected;
     private int n;
     private int entry = 0;
-    public int counter = 0;
+    private int counter = 0;
     private bool wasCorrect = false;
 
     private void Start() {
@@ -42,7 +43,8 @@ public class QuickTime : MonoBehaviour {
 
             if (counter >= 5) {
                 Start();
-                enabled = false;
+                StopArea.SetActive(true);
+                gameObject.SetActive(false);
             }
 
             Start();

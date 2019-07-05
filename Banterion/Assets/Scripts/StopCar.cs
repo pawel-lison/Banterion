@@ -20,7 +20,7 @@ public class StopCar : MonoBehaviour {
         if (speed_x > 0) {
             speed_y = speed_x > 3.5f ? speed_y + 0.02f : speed_y - 0.02f;
             speed_x = 0;
-            rb.velocity.Set(-speed_x, speed_y);
+            rb.velocity.Set(0, 0);
         }
     }
 

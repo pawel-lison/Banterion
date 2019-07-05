@@ -5,6 +5,7 @@ using UnityEngine;
 public class RunCar : MonoBehaviour {
 
     public float speed = 10.0f;
+    private int entry = 0;
     private Rigidbody2D rb;
     private Vector2 screenBounds;
     private QuickTime qte;
@@ -27,11 +28,14 @@ public class RunCar : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (qte.GetCounter() >= 5) {
+        if (entry == 0 && qte.GetCounter() >= 5) {
             Debug.Log("car trigger");
             stop.enabled = true;
-            enabled = false;
             qte.SetCounter(0);
+            entry++;
+        }
+        else if(entry == 1) {
+            entry--;
         }
     }
 }

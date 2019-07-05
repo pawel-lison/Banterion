@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HitchingRide.unity
+    guid: 41694e1cf27587340a3823b6514c6a9f
+  - enabled: 1
+    path: Assets/Scenes/Car.unity
+    guid: c15900db98843334bb2c9d0fbdb9b434
   m_configObjects: {}

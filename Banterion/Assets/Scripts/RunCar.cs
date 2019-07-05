@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RunCar : MonoBehaviour {
 
@@ -29,6 +30,9 @@ public class RunCar : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (entry == 0 && qte.GetCounter() >= 5) {
+
+            LoadScene();
+
             Debug.Log("car trigger");
             stop.enabled = true;
             qte.SetCounter(0);
@@ -38,4 +42,10 @@ public class RunCar : MonoBehaviour {
             entry--;
         }
     }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
 }

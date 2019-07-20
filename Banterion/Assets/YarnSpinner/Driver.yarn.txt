@@ -1,0 +1,29 @@
+title: Driver
+tags: 
+colorID: 0
+position: 524,111
+---
+    Player: Hello.
+    Driver: Hi.
+    Player: Does this yarn thing work?
+    Driver: Apparently.
+[[So...?|Driver.Watch]]
+[[See ya.|Driver.Exit]]
+===
+
+title: Driver.Watch
+tags: 
+colorID: 0
+position: 512,430
+---
+Driver: Yea. 
+Driver: This scene gonna end soon.
+===
+
+title: Driver.Exit
+tags: 
+colorID: 6
+position: 211,417
+---
+Driver: Begone thot.
+===

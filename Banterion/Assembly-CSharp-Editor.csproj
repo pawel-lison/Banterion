@@ -311,6 +311,18 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr4.Runtime.Standard">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/YarnSpinner.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -325,18 +337,6 @@
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/YarnSpinner.dll</HintPath>
-    </Reference>
-    <Reference Include="CsvHelper">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/CsvHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr4.Runtime.Standard">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.0f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

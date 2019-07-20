@@ -101,6 +101,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Sounds\The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala\INFO.txt" />
     <None Include="Assets\YarnSpinner\README.txt" />
+    <None Include="Assets\YarnSpinner\Driver.yarn.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -325,6 +326,18 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.0f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr4.Runtime.Standard">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="YarnSpinner">
+      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/YarnSpinner.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Analytics.Editor">
       <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
@@ -333,18 +346,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="YarnSpinner">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/YarnSpinner.dll</HintPath>
-    </Reference>
-    <Reference Include="CsvHelper">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/CsvHelper.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr4.Runtime.Standard">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Antlr4.Runtime.Standard.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Users/rober/Desktop/Banterion/Banterion/Assets/YarnSpinner/Code/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.0f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

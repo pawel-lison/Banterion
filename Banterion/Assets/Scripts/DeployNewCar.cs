@@ -15,7 +15,7 @@ public class DeployNewCar : MonoBehaviour {
 
     private void spawnCars() {
         GameObject a = Instantiate(carPrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x * 1.5f, 2.83f);
+        a.transform.position = new Vector2(screenBounds.x * 1.5f, 3.35f);
     }
 
     IEnumerator CarTraffic() {

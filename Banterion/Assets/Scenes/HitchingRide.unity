@@ -1302,7 +1302,6 @@ GameObject:
   m_Component:
   - component: {fileID: 481375139}
   - component: {fileID: 481375138}
-  - component: {fileID: 481375137}
   - component: {fileID: 481375140}
   - component: {fileID: 481375141}
   m_Layer: 0
@@ -1312,26 +1311,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &481375137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481375136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d281acb9dad5794ca8f5d506f618603, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpriteUp: {fileID: 0}
-  SpriteDown: {fileID: 0}
-  SpriteLeft: {fileID: 0}
-  SpriteRight: {fileID: 0}
-  SpriteBG: {fileID: 0}
-  car: {fileID: 866917810655509070, guid: a95b7ebb862cd1f4e99b8c901fdc8f93, type: 3}
-  QTE: {fileID: 0}
-  StopArea: {fileID: 376727229}
 --- !u!61 &481375138
 BoxCollider2D:
   m_ObjectHideFlags: 0

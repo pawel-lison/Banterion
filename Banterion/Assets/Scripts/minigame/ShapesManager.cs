@@ -14,8 +14,8 @@ public class ShapesManager : MonoBehaviour {
 
     private int score;
 
-    public readonly Vector2 BottomRight = new Vector2(-2.37f, -4.27f);
-    public readonly Vector2 CandySize = new Vector2(0.7f, 0.7f);
+    public readonly Vector2 BottomRight = new Vector2(-3.3f, -1.2f);
+    public readonly Vector2 CandySize = new Vector2(0.5f, 0.5f);
 
     private GameState state = GameState.None;
     private GameObject hitGo = null;

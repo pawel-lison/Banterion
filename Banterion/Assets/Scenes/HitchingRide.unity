@@ -1310,7 +1310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &481375138
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1321,7 +1321,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7924524, y: -0.15370178}
@@ -1382,7 +1382,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.5429251, y: -0.15643573}
@@ -3090,6 +3090,7 @@ MonoBehaviour:
   DebugText: {fileID: 1913490291}
   ScoreText: {fileID: 1760174543}
   ShowDebugInfo: 0
+  carColor: 
   CandyPrefabs:
   - {fileID: 8512766480254873430, guid: 03a776df106cbc04b99bc753741f0c6a, type: 3}
   - {fileID: 6801450053123805128, guid: 8e8daf82c54d1f640a663d144630ed4d, type: 3}

@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class ShapesManager : MonoBehaviour {
     public Text DebugText, ScoreText;
     public bool ShowDebugInfo = false;
+    public string carColor = null;
+
     //candy graphics taken from http://opengameart.org/content/candy-pack-1
 
     public ShapesArray shapes;

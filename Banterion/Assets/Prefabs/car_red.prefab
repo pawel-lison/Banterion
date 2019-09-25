@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5606454624335081430}
   - component: {fileID: 1898855456304831583}
   m_Layer: 0
-  m_Name: red_car
+  m_Name: car_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,7 +157,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6134093966734339935}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

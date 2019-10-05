@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Graphical Assets\Characters\LarryIRL\KidLarry\Scripts\KidLarryMovementAnimationsDemoScript.cs" />
      <Compile Include="Assets\InCar.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
      <Compile Include="Assets\Scripts\CharacterMovement.cs" />
      <Compile Include="Assets\Scripts\DeployNewCar.cs" />
      <Compile Include="Assets\Scripts\DeployNewCarO.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\RunCarO.cs" />
      <Compile Include="Assets\Scripts\RunCloud.cs" />
      <Compile Include="Assets\Scripts\Shadow.cs" />
+     <Compile Include="Assets\Scripts\Sound.cs" />
      <Compile Include="Assets\Scripts\StopCar.cs" />
      <Compile Include="Assets\Stop.cs" />
      <Compile Include="Assets\YarnSpinner\Code\DialogueRunner.cs" />

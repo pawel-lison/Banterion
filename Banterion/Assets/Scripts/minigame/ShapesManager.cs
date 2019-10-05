@@ -168,8 +168,7 @@ public class ShapesManager : MonoBehaviour {
                 var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 if (hit.collider != null) //we have a hit!!!
                 {
-                    //SOUND_CLICK
-
+                    AudioManager.instance.Play("Click");
                     hitGo = hit.collider.gameObject;
                     state = GameState.SelectionStarted;
                 }
@@ -243,8 +242,7 @@ public class ShapesManager : MonoBehaviour {
             hitGo2.transform.positionTo(Constants.AnimationDuration, hitGo.transform.position);
             yield return new WaitForSeconds(Constants.AnimationDuration);
 
-            //SOUND_NO_MATCH
-
+            AudioManager.instance.Play("No_Match");
             shapes.UndoSwap();
         }
 
@@ -264,10 +262,11 @@ public class ShapesManager : MonoBehaviour {
         while (totalMatches.Count() >= Constants.MinimumMatches) {
             //increase score
             IncreaseScore((totalMatches.Count() - 2) * Constants.Match3Score);
-            //SOUND_MATCH
-
+            
             if (timesRun >= 2)
                 IncreaseScore(Constants.SubsequentMatchScore);
+
+            AudioManager.instance.Play("Match");
 
             foreach (var item in totalMatches) {
                 shapes.Remove(item);

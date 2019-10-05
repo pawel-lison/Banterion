@@ -163,10 +163,13 @@ public class ShapesManager : MonoBehaviour {
         if (state == GameState.None) {
             //user has clicked or touched
             if (Input.GetMouseButtonDown(0)) {
+
                 //get the hit position
                 var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 if (hit.collider != null) //we have a hit!!!
                 {
+                    //SOUND_CLICK
+
                     hitGo = hit.collider.gameObject;
                     state = GameState.SelectionStarted;
                 }
@@ -176,7 +179,6 @@ public class ShapesManager : MonoBehaviour {
         else if (state == GameState.SelectionStarted) {
             //user dragged
             if (Input.GetMouseButton(0)) {
-
 
                 var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 //we have a hit
@@ -191,6 +193,7 @@ public class ShapesManager : MonoBehaviour {
                         state = GameState.None;
                     }
                     else {
+
                         state = GameState.Animating;
                         FixSortingLayer(hitGo, hit.collider.gameObject);
                         StartCoroutine(FindMatchesAndCollapse(hit));
@@ -240,6 +243,8 @@ public class ShapesManager : MonoBehaviour {
             hitGo2.transform.positionTo(Constants.AnimationDuration, hitGo.transform.position);
             yield return new WaitForSeconds(Constants.AnimationDuration);
 
+            //SOUND_NO_MATCH
+
             shapes.UndoSwap();
         }
 
@@ -259,6 +264,7 @@ public class ShapesManager : MonoBehaviour {
         while (totalMatches.Count() >= Constants.MinimumMatches) {
             //increase score
             IncreaseScore((totalMatches.Count() - 2) * Constants.Match3Score);
+            //SOUND_MATCH
 
             if (timesRun >= 2)
                 IncreaseScore(Constants.SubsequentMatchScore);
@@ -269,8 +275,9 @@ public class ShapesManager : MonoBehaviour {
             }
 
             //check and instantiate Bonus if needed
-            if (addBonus)
+            if (addBonus) {
                 CreateBonus(hitGoCache);
+            }
 
             addBonus = false;
 
@@ -311,6 +318,7 @@ public class ShapesManager : MonoBehaviour {
     /// </summary>
     /// <param name="hitGoCache"></param>
     private void CreateBonus(Shape hitGoCache) {
+        //SOUND_ADD_BONUS
         GameObject Bonus = Instantiate(GetBonusFromType(hitGoCache.Type), BottomRight
             + new Vector2(hitGoCache.Column * CandySize.x,
                 hitGoCache.Row * CandySize.y), Quaternion.identity)
